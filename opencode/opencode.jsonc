@@ -1,0 +1,80 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "providers": {
+    "[PROVIDER_NAME]": {
+      "settings": {
+        "baseURL": "[BASE_URL]",
+        "apiKey": "[API_KEY]",
+      },
+      "models": {},
+    },
+  },
+
+  "plugins": ["opencode-antigravity-auth@2.1.2"],
+
+  "mcp": {
+    "figma": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.figma.com/mcp",
+      "oauth": {
+        "clientId": "[FIGMA_CLIENT_ID]",
+        "clientSecret": "[FIGMA_CLIENT_SECRET]",
+      },
+    },
+    "github": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "enabled": true,
+      "oauth": false,
+      "headers": {
+        "Authorization": "Bearer [GITHUB_PAT]",
+      },
+    },
+  },
+
+  "small_model": "opencode/deepseek-v4.1-flash-free",
+
+  "agent": {
+    "general": {
+      "mode": "subagent",
+      "model": "opencode/mimo-v2.6-flash-free",
+    },
+
+    "explore": {
+      "mode": "subagent",
+      "model": "opencode/mimo-v2.6-flash-free",
+    },
+
+    "scout": {
+      "mode": "subagent",
+      "model": "opencode/mimo-v2.6-flash-free",
+    },
+
+    "general-flash": {
+      "mode": "subagent",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "description": "Backup general-purpose subagent used when the primary general agent is unavailable.",
+    },
+
+    "explore-flash": {
+      "mode": "subagent",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "description": "Backup read-only repository exploration subagent.",
+    },
+
+    "scout-flash": {
+      "mode": "subagent",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "description": "Backup external documentation and dependency research subagent.",
+    },
+
+    "reviewer": {
+      "mode": "subagent",
+      "model": "opencode/mimo-v2.6-flash-free",
+      "description": "Reviews complex pull requests, code changes, and linting issues.",
+    },
+  },
+
+  "subagent_depth": 1,
+}
