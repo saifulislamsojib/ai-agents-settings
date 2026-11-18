@@ -5,7 +5,7 @@
       "name": "[PROVIDER_NAME]",
       "package": "@opencode/ai/providers/openai-compatible",
       "settings": {
-        "baseURL": "[BASE_URL]",
+        "baseURL": "[BASE_URL]", // with `/v1`
         "apiKey": "[API_KEY]",
       },
       "models": {},

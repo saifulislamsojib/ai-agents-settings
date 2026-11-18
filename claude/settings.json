@@ -1,0 +1,41 @@
+{
+  "claudeCode.disableLoginPrompt": true,
+  "env": {
+    "ANTHROPIC_BASE_URL": "[BASE_URL]", // without `/v1`
+    "ANTHROPIC_AUTH_TOKEN": "[API_KEY]",
+    "CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY": "1",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "",
+
+    "ANTHROPIC_DEFAULT_MODEL": "",
+    "ANTHROPIC_SMALL_FAST_MODEL": "",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": ""
+  },
+  "permissions": {
+    "deny": [
+      "EnterWorktree",
+      "EnterPlanMode",
+      "ExitPlanMode",
+      "DesignSync",
+      "NotebookEdit",
+      "SendMessage",
+      "PushNotification",
+      "RemoteTrigger",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "CronCreate",
+      "CronDelete",
+      "CronList"
+    ],
+    "ask": ["Bash(rm *)"]
+  },
+  "disableClaudeAiConnectors": true,
+  "disableBundledSkills": true,
+  "disableRemoteControl": true,
+  "disableWorkflows": true,
+  "disableArtifact": true,
+  "effortLevel": "medium",
+  "theme": "auto"
+}
