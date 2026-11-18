@@ -1,5 +1,4 @@
 {
-  "claudeCode.disableLoginPrompt": true,
   "env": {
     "ANTHROPIC_BASE_URL": "[BASE_URL]", // without `/v1`
     "ANTHROPIC_AUTH_TOKEN": "[API_KEY]",
